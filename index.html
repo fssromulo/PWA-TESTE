@@ -46,18 +46,21 @@
 	<body>
 		<div class="container">
 			<div class="teste">
-				<div class="preloader-wrapper big active">
-					<div class="spinner-layer spinner-red-only">
-					<div class="circle-clipper left">
-					<div class="circle"></div>
-					</div><div class="gap-patch">
-					<div class="circle"></div>
-					</div><div class="circle-clipper right">
-					<div class="circle"></div>
+				<div id="texto2">
+					<div class="preloader-wrapper big active">
+						<div class="spinner-layer spinner-red-only">
+						<div class="circle-clipper left">
+						<div class="circle"></div>
+						</div><div class="gap-patch">
+						<div class="circle"></div>
+						</div><div class="circle-clipper right">
+						<div class="circle"></div>
+						</div>
+						</div>
 					</div>
-					</div>
+				Atualizando dados do servidor... </div>
+				<div id="texto3">Atualizado com sucesso!!!!! </div>
 				</div>
-				Hello World PWA's !!!
 			</div>
 		</div>
 	</body>
@@ -65,4 +68,19 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	<script type="text/javascript" src="./js/app.js"></script>
+
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			
+			$("#texto3").hide();
+
+			window.setInterval(function() {
+			    $("#texto2").hide();
+			    $("#texto3").show();
+			}, 2000);
+
+
+		});
+
+	</script>
 </html>
