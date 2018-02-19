@@ -3,7 +3,7 @@ var dataCacheName = 'weatherData-v1';
 var urlsToCache = [
   '/',
   '/index.html',
-  '/materialize/',
+  '/materialize',
   '/js/app.js'
 ];
 
