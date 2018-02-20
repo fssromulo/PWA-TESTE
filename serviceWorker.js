@@ -1,7 +1,7 @@
 var CACHE_NAME = 'my-site-cache-v2';
 var dataCacheName = 'weatherData-v2';
 var urlsToCache = [
-  './',
+  '/PWA-TESTE/',
   '/index.html',
   '/materialize/css/materialize.min.css',
   '/materialize/js/materialize.min.js',
