@@ -1,5 +1,5 @@
-var CACHE_NAME = 'my-site-cache-v1';
-var dataCacheName = 'weatherData-v1';
+var CACHE_NAME = 'my-site-cache-v2';
+var dataCacheName = 'weatherData-v2';
 var urlsToCache = [
   '.',
   '/index.html',
