@@ -1,25 +1,22 @@
-var urlsToCache = [
-  '.',
+var filesToCache = [
+  '/',
   '/index.html',
   '/materialize',
   '/js/app.js'
 ];
 
-var CACHE_NAME = 'my-site-cache-v1';
+var cacheName = 'my-site-cache-v1';
 var dataCacheName = 'weatherData-v1';
 
-
-self.addEventListener('install', function(event) {
-  // Perform install steps
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
+self.addEventListener('install', function(e) {
+  console.log('[ServiceWorker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('[ServiceWorker] Caching app shell');
+      return cache.addAll(filesToCache);
+    })
   );
 });
-
 
 self.addEventListener('activate', function(e) {
   console.log('[ServiceWorker] Activate');
