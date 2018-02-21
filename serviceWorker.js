@@ -1,9 +1,11 @@
-var filesToCache = [
-  '/',
-  '/index.html',
-  '/materialize',
-  '/js/app.js'
-];
+// var filesToCache = [
+//   '/',
+//   '/index.html',
+//   '/materialize',
+//   '/js/app.js'
+// ];
+
+var filesToCache = [];
 
 var cacheName = 'my-site-cache-v1';
 var dataCacheName = 'weatherData-v1';
