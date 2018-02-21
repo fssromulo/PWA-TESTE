@@ -7,8 +7,8 @@
 
 var filesToCache = [];
 
-var cacheName = 'my-site-cache-v3';
-var dataCacheName = 'weatherData-v3';
+var cacheName = 'my-site-cache-v4';
+var dataCacheName = 'weatherData-v4';
 
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
