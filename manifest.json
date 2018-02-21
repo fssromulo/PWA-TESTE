@@ -18,8 +18,11 @@
       "sizes": "256x256",
       "type": "image/png"
     }],
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
+  "related_applications": [{
+    "platform": "web"
+  }],
   "background_color": "#1889ff",
   "theme_color": "#1889ff"
 }
