@@ -1,9 +1,9 @@
-var filesToCache = [
-  '/',
-  '/index.html',
-  '/materialize',
-  '/js/app.js'
-];
+// var filesToCache = [
+//   '/',
+//   '/index.html',
+//   '/materialize',
+//   '/js/app.js'
+// ];
 
 var filesToCache = [];
 
