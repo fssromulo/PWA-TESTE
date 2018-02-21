@@ -1,11 +1,13 @@
-var CACHE_NAME = 'my-site-cache-v1';
-var dataCacheName = 'weatherData-v1';
 var urlsToCache = [
-  '/',
+  '.',
   '/index.html',
   '/materialize',
   '/js/app.js'
 ];
+
+var CACHE_NAME = 'my-site-cache-v1';
+var dataCacheName = 'weatherData-v1';
+
 
 self.addEventListener('install', function(event) {
   // Perform install steps
