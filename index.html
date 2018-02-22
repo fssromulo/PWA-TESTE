@@ -132,6 +132,14 @@
 			</div>
 
 			<div id="meus_servicos">
+
+            <div id="modelo">
+
+            </div>
+
+ <br/>
+ <br/> <br/>
+
 			  <ul class="collapsible" data-collapsible="accordion">
 			    <li>
 			      <div class="collapsible-header active">
@@ -208,10 +216,9 @@
                 method: 'get',
                 success: function (result) {
                   console.log(result);
-                  $("#rua").val(result.logradouro);
-                  $("#bairro").val(result.bairro);
-                  $("#cidade").val(result.localidade);
-                  $("#estado").val(result.uf);
+                     $.each(result, function(key, value) {
+                          $('#modelo').html(value);
+                     });
 
                 },
                 error: function(result) {
