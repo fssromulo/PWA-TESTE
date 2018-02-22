@@ -133,9 +133,12 @@
 
 			<div id="meus_servicos">
 
-            <div id="modelo">
+            <div id="modelo"></div>
 
-            </div>
+            <p id="rua"> </p>
+            <p id="bairro"> </p>
+            <p id="cidade"> </p>
+            <p id="estado"> </p>
 
  <br/>
  <br/> <br/>
@@ -225,6 +228,22 @@
                    $("#mensagem").html("Erro");
                 }
              });
+
+
+           $.ajax({
+             url : 'https://viacep.com.br/ws/89060112/json/',
+             method: 'get',
+             success: function (result) {
+               $("#rua").val(result.logradouro);
+               $("#bairro").val(result.bairro);
+               $("#cidade").val(result.localidade);
+               $("#estado").val(result.uf);
+
+             },
+             error: function(result) {
+                $("#mensagem").html("Erro");
+             }
+          });
 
 		 	});
 
