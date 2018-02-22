@@ -202,6 +202,23 @@
 		 	$("#link_meus_servicos").on('click', function(){
 		 		$("#meus_servicos").show();
 		 		$("#frm_login").hide();
+
+             $.ajax({
+                url : 'https://ajudevovo.000webhostapp.com/teste.php',
+                method: 'get',
+                success: function (result) {
+                  console.log(result);
+                  $("#rua").val(result.logradouro);
+                  $("#bairro").val(result.bairro);
+                  $("#cidade").val(result.localidade);
+                  $("#estado").val(result.uf);
+
+                },
+                error: function(result) {
+                   $("#mensagem").html("Erro");
+                }
+             });
+
 		 	});
 
 		 	$("#link_frm_login").on('click', function(){
@@ -221,5 +238,9 @@
 		});
 
 	</script>
+
+
+
+
 
 </html>
