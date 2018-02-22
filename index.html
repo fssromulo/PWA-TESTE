@@ -133,13 +133,12 @@
 
 			<div id="meus_servicos">
 
-            <div id="modelo"></div>
-
-            <p id="rua"> </p>
-            <p id="bairro"> </p>
-            <p id="cidade"> </p>
-            <p id="estado"> </p>
-
+            <div id="modelo">            	
+	            <p id="rua"> </p>
+	            <p id="bairro"> </p>
+	            <p id="cidade"> </p>
+	            <p id="estado"> </p>
+            </div>
  <br/>
  <br/> <br/>
 
@@ -215,12 +214,17 @@
 		 		$("#frm_login").hide();
    /*
              $.ajax({
-                url : 'https://ajudevovo.000webhostapp.com/teste.php',
+                url : 'https://ajudevovo.000webhostapp.com/ListarServico/getServicos',
                 method: 'get',
                 success: function (result) {
                   console.log(result);
                      $.each(result, function(key, value) {
-                          $('#modelo').html(value);
+                          $('#modelo').append(
+                          	'<p>' + value.id_servico + '</p>');
+                          	.append('<p>' + value.id_servico + '</p>');
+                          	.append('<p>' + value.descricao + '</p>');
+                          	.append('<p>' + value.valor + '</p>');
+                          	.append('<p>' + value.detalhe + '</p>');
                      });
 
                 },
