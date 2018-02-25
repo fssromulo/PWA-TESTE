@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>PWA inicial</title>
+		<meta charset="utf-8">
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link rel="stylesheet" type="text/css" href="./materialize/css/materialize.min.css"/>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -26,6 +28,10 @@
 		<!-- PWA things; -->
 		<!-- PWA things; -->
 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1889ff"/>
+	<meta name="apple-mobile-web-app-title" content="Ajude o Vovô" />
+
 	<link rel="apple-touch-icon" sizes="57x57" href="./pwa_icons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="./pwa_icons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="./pwa_icons/apple-touch-icon-72x72.png">
@@ -48,156 +54,173 @@
 
 	</head>
 	<body>
+		<div ng-app="AppHome" ng-controller="controllerHome">
 
+			  <nav>
+			    <div class="nav-wrapper blue #1889ff">
+			      <a href="#!" class="brand-logo"><img src="pwa_icons/android-chrome-48x48.png"/></a>
+			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			      <ul class="right hide-on-med-and-down">
+			        <li><a href="#">Home</a></li>
+			        <li><a href="#">Quero ajudar</a></li>
+			        <li><a href="#">Solicitar ajuda</a></li>
+			      </ul>
+					  <ul id="mobile-demo" class="side-nav">
+					    <li><div class="user-view">
+					      <div class="background blue #1889ff">
+					        <div class="blue lighten-1"></div>
+					      </div>
+					      <a href="#!user"><img class="circle" src="pwa_icons/android-chrome-192x192.png"></a>
+					      <a href="#!name"><span class="white-text name">Adalberto Azevedo</span></a>
+					      <a href="#!email"><span class="white-text email">ajudevovo@gmail.com</span></a>
+					    </div></li>
+					    <li><a href="#!" id="link_frm_login" ><i class="material-icons">home</i>Home</a></li>
+					    <li><a href="#!" id="link_meus_servicos"><i class="material-icons">person_add</i>Quero ajudar</a></li>
+					    <li><a href="#!"><i class="material-icons">group_add</i>Solicitar ajuda</a></li>
 
-  <nav>
-    <div class="nav-wrapper blue #1889ff">
-      <a href="#!" class="brand-logo"><img src="pwa_icons/android-chrome-48x48.png"/></a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Quero ajudar</a></li>
-        <li><a href="#">Solicitar ajuda</a></li>
-      </ul>
-		  <ul id="mobile-demo" class="side-nav">
-		    <li><div class="user-view">
-		      <div class="background blue #1889ff">
-		        <div class="blue lighten-1"></div>
-		      </div>
-		      <a href="#!user"><img class="circle" src="pwa_icons/android-chrome-192x192.png"></a>
-		      <a href="#!name"><span class="white-text name">Adalberto Azevedo</span></a>
-		      <a href="#!email"><span class="white-text email">ajudevovo@gmail.com</span></a>
-		    </div></li>
-		    <li><a href="#!" id="link_frm_login" ><i class="material-icons">home</i>Home</a></li>
-		    <li><a href="#!" id="link_meus_servicos"><i class="material-icons">person_add</i>Quero ajudar</a></li>
-		    <li><a href="#!"><i class="material-icons">group_add</i>Solicitar ajuda</a></li>
-
-		  </ul>
-    </div>
-  </nav>
-
-
-		<div class="container">
-			<div class="row">
-      		<div class="grid-example col s12">
-		<!-- 		<div class="teste">
-					<div id="texto2">
-						<div class="preloader-wrapper big active">
-							<div class="spinner-layer spinner-red-only">
-							<div class="circle-clipper left">
-							<div class="circle"></div>
-							</div><div class="gap-patch">
-							<div class="circle"></div>
-							</div><div class="circle-clipper right">
-							<div class="circle"></div>
-							</div>
-							</div>
-						</div>
-					Atualizando dados do servidor... </div>
-					<div id="texto3">Atualizado com sucesso!!!!! </div>
-					</div>-->
-				</div>
-			</div>
-
-
-		</div>
-
+					  </ul>
+			    </div>
+			  </nav>
 
     <!-- Page Layout here -->
-    <div class="row">
+		    <div class="row">
 
-      <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-		    <div id="frm_login">
-			   <div class="row">
-			    <form class="col s12">
-			      <div class="row">
-			        <div class="input-field col s12">
-			          <input value="" id="disabled" type="email" class="validate">
-			          <label for="disabled">Usuário/E-mail</label>
-			        </div>
-			      </div>
-			      <div class="row">
-			        <div class="input-field col s12">
-			          <input id="password" type="password" class="validate">
-			          <label for="password">Password</label>
-			        </div>
-			      </div>
-			      <div class="row">
-			        <div class="input-field col s12 ">
-			          <a class="waves-effect waves-light btn right">Entrar</a>
-			        </div>
-			      </div>
-			    </form>
-			  </div>
-			</div>
+		      <div class="col s12 m10 l10"> <!-- Note that "m8 l9" was added -->
 
-			<div id="meus_servicos">
-
-            <div id="modelo">            	
-	            <p id="rua"> </p>
-	            <p id="bairro"> </p>
-	            <p id="cidade"> </p>
-	            <p id="estado"> </p>
-            </div>
- <br/>
- <br/> <br/>
-
-			  <ul class="collapsible" data-collapsible="accordion">
-			    <li>
-			      <div class="collapsible-header active">
-			      		<i class="material-icons">filter_drama</i>
-			      		Jardinagem com carinho
-			      </div>
-			      <div class="collapsible-body">
-			      	<div class="row">
-			      		<a href="#"><i class="material-icons green-text ">thumb_up</i> Aceitar</a>
-			      		<a href="#"><i class="material-icons red-text">thumb_down</i> Recusar</a>
-			      	</div>
-
-			      	<span><strong>Idoso:</strong>Paulo Silveira</span>
-			      	<br/>
-			      	<span><strong>Data:</strong>04/03/2018</span>
-			      	<br/>
-			      	<span><strong>Situação:</strong>Aguardando aprovação</span>
-			      </div>
-			    </li>
-			    <li>
-			      <div class="collapsible-header"><i class="material-icons">place</i>Troco lâmpadas</div>
-			      <div class="collapsible-body">
-			      	<div class="row">
-			      		<a href="#"><i class="material-icons green-text ">thumb_up</i> Aceito</a>
-			      	</div>
-
-			      	<span><strong>Idoso:</strong>Ana Marias Pereira</span>
-			      	<br/>
-			      	<span><strong>Data:</strong>08/03/2018</span>
-			      	<br/>
-			      	<span><strong>Situação:</strong>Aprovado</span>
-
-			      </div>
-			    </li>
-			    <li>
-			      <div class="collapsible-header"><i class="material-icons">whatshot</i>Limpeza geral de casas</div>
-			      <div class="collapsible-body">
-			      	<div class="row">
-			      		<a href="#"><i class="material-icons red-text">thumb_down</i>Recusado</a>
-			      	</div>
-
-			      	<span><strong>Idoso:</strong>Renato de Abreu e Lima Santos</span>
-			      	<br/>
-			      	<span><strong>Data:</strong>29/03/2018</span>
-			      	<br/>
-			      	<span><strong>Situação:</strong>Recusado</span>
-
-
-			      </div>
-			    </li>
-			  </ul>
-			</div>
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
       </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
     </div>
+        
+
+				    <div id="frm_login" hidden>
+					   <div class="row">
+					    <form class="col s12">
+					      <div class="row">
+					        <div class="input-field col s12">
+					          <input
+					          	value=""
+					          	type="email"
+					          	class="validate" 
+					          	data-ng-model="usuario_logar"/>
+					          <label for="disabled">Usuário/E-mail</label>
+					        </div>
+					      </div>
+					      <div class="row">
+					        <div class="input-field col s12">
+					          <input
+					          	id="password"
+					          	type="password"
+					          	class="validate"
+					          	data-ng-model="senha_logar"
+					          />
+					          <label for="password">Password</label>
+					        </div>
+					      </div>
+					      <div class="row">
+							    <div class="col s6">
+							      <input class="with-gap" name="group1" type="radio" id="test3" value="ajudante"  />
+							      <label for="test3">Quero ajudar</label> &nbsp;
+							    </div>
+
+							    <div class="col s6">
+							       <input class="with-gap" name="group1" type="radio" id="test4" value="contratante"  />
+							      <label for="test4">Solicitar ajuda</label>
+							    </div>
+					      </div>
+					      <div class="row">
+					        <div class="input-field col s12 ">
+					          <a class="waves-effect waves-light btn right">Entrar</a>
+					        </div>
+					      </div>
+					    </form>
+					  </div>
+					</div>
+		
+					<br/> <br/>
+
+					<ul class="collapsible" data-collapsible="accordion" hidden>
+						<li>
+					      <div class="collapsible-header active">
+					      		<i class="material-icons">filter_drama</i>
+					      		Jardinagem com carinho
+					      </div>
+					      <div class="collapsible-body">
+					      	<div class="row">
+					      		<a href="#"><i class="material-icons green-text ">thumb_up</i> Aceitar</a>
+					      		<a href="#"><i class="material-icons red-text">thumb_down</i> Recusar</a>
+					      	</div>
+
+					      	<span><strong>Idoso:</strong>Paulo Silveira</span>
+					      	<br/>
+					      	<span><strong>Data:</strong>04/03/2018</span>
+					      	<br/>
+					      	<span><strong>Situação:</strong>Aguardando aprovação</span>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="collapsible-header"><i class="material-icons">place</i>Troco lâmpadas</div>
+					      <div class="collapsible-body">
+					      	<div class="row">
+					      		<a href="#"><i class="material-icons green-text ">thumb_up</i> Aceito</a>
+					      	</div>
+
+					      	<span><strong>Idoso:</strong>Ana Marias Pereira</span>
+					      	<br/>
+					      	<span><strong>Data:</strong>08/03/2018</span>
+					      	<br/>
+					      	<span><strong>Situação:</strong>Aprovado</span>
+
+					      </div>
+					    </li>
+					    <li>
+					      <div class="collapsible-header"><i class="material-icons">whatshot</i>Limpeza geral de casas</div>
+					      <div class="collapsible-body">
+					      	<div class="row">
+					      		<a href="#"><i class="material-icons red-text">thumb_down</i>Recusado</a>
+					      	</div>
+
+					      	<span><strong>Idoso:</strong>Renato de Abreu e Lima Santos</span>
+					      	<br/>
+					      	<span><strong>Data:</strong>29/03/2018</span>
+					      	<br/>
+					      	<span><strong>Situação:</strong>Recusado</span>
 
 
+					      </div>
+					    </li>
+					  </ul>
+					</div>
+		      </div>
+		    </div>
 
 	</body>
 
@@ -234,21 +257,6 @@
              });
 
 
-           $.ajax({
-             url : 'https://viacep.com.br/ws/89060112/json/',
-             method: 'get',
-             success: function (result) {
-               $("#rua").text(result.logradouro);
-               $("#bairro").text(result.bairro);
-               $("#cidade").text(result.localidade);
-               $("#estado").text(result.uf);
-
-             },
-             error: function(result) {
-                $("#mensagem").html("Erro");
-             }
-          });
-
 		 	});
 
 		 	$("#link_frm_login").on('click', function(){
@@ -265,12 +273,9 @@
 		      onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
 		    }
 		  );
+
+		 	$("#frm_login").show();
 		});
 
 	</script>
-
-
-
-
-
 </html>
