@@ -37,6 +37,13 @@ self.addEventListener('activate', function(e) {
   return self.clients.claim();
 });
 
+self.addEventListener('push', function(event) {
+  event.waitUntil(
+    self.registration.showNotification('Ajude o vovô - Informa...', {
+      body: 'Existem mais aviões no mar, que submarinos no céu!'
+   }));
+});
+
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
