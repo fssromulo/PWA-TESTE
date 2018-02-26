@@ -77,38 +77,111 @@
 					    <li><a href="index.html" id="link_frm_login" ><i class="material-icons">home</i>Home</a></li>
 					    
 					    <li><a href="index.html"><i class="material-icons">power_settings_new</i>Sair</a></li>
+
 					  </ul>
 			    </div>
 			  </nav>
 
-    			<!-- Page Layout here -->
-		    	<div class="row">
+    <!-- Page Layout here -->
+		    <div class="row">
 
-		      		<div class="col s12 m10 l10"> <!-- Note that "m8 l9" was added -->     
+		      <div class="col s12 m10 l10"> <!-- Note that "m8 l9" was added -->     
 
-						<div class="row"> &nbsp;</div>
-						<div class="row">
-					    <div class="col s12">
-								<button
-									onclick="location.href='login.html'"
-									class="waves-effect btn btn-large col s12 deep-orange accent-2"><i class="material-icons left">person_add</i><strong>Sou um ajudante</strong></button>
-					    </div>
-						</div>
-						<div class="row">
-					    <div class="col s12">					     
-								<button
-									onclick="location.href='login.html'"
-									class="waves-effect btn btn-large col s12 deep-orange accent-2">
-									<i class="material-icons left">group_add</i>
-									<strong>Sou um vovô</strong>
-								</button>
-					    </div>
-						</div>
+				    <div id="frm_login" hidden>
+					   <div class="row">
+					   	<div class="row"> &nbsp;</div>
+					    <form class="col s12">
+					      <div class="row">
+					        <div class="input-field col s12">
+					          <input
+					          	value=""
+					          	type="email"
+					          	class="validate" 
+					          	data-ng-model="usuario_logar"/>
+					          <label for="disabled">Usuário/E-mail</label>
+					        </div>
+					      </div>
+					      <div class="row">
+					        <div class="input-field col s12">
+					          <input
+					          	id="password"
+					          	type="password"
+					          	class="validate"
+					          	data-ng-model="senha_logar"
+					          />
+					          <label for="password">Senha</label>
+					        </div>
+					      </div>
+					      <div class="row">
+							    <div class="col s12">
+							      <a href="#">Novo por aqui? Cadastre-se!</a>
+							    </div>
+					      </div>
+					      <div class="row">
+					        <div class="input-field col s12 ">
+					          <a class="waves-effect waves-light btn right">Entrar</a>
+					        </div>
+					      </div>
+					    </form>
+					  </div>
+					</div>
+		
+					<br/> <br/>
 
-				 
+					<ul class="collapsible" data-collapsible="accordion" hidden>
+						<li>
+					      <div class="collapsible-header active">
+					      		<i class="material-icons">filter_drama</i>
+					      		Jardinagem com carinho
+					      </div>
+					      <div class="collapsible-body">
+					      	<div class="row">
+					      		<a href="#"><i class="material-icons green-text ">thumb_up</i> Aceitar</a>
+					      		<a href="#"><i class="material-icons red-text">thumb_down</i> Recusar</a>
+					      	</div>
+
+					      	<span><strong>Idoso:</strong>Paulo Silveira</span>
+					      	<br/>
+					      	<span><strong>Data:</strong>04/03/2018</span>
+					      	<br/>
+					      	<span><strong>Situação:</strong>Aguardando aprovação</span>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="collapsible-header"><i class="material-icons">place</i>Troco lâmpadas</div>
+					      <div class="collapsible-body">
+					      	<div class="row">
+					      		<a href="#"><i class="material-icons green-text ">thumb_up</i> Aceito</a>
+					      	</div>
+
+					      	<span><strong>Idoso:</strong>Ana Marias Pereira</span>
+					      	<br/>
+					      	<span><strong>Data:</strong>08/03/2018</span>
+					      	<br/>
+					      	<span><strong>Situação:</strong>Aprovado</span>
+
+					      </div>
+					    </li>
+					    <li>
+					      <div class="collapsible-header"><i class="material-icons">whatshot</i>Limpeza geral de casas</div>
+					      <div class="collapsible-body">
+					      	<div class="row">
+					      		<a href="#"><i class="material-icons red-text">thumb_down</i>Recusado</a>
+					      	</div>
+
+					      	<span><strong>Idoso:</strong>Renato de Abreu e Lima Santos</span>
+					      	<br/>
+					      	<span><strong>Data:</strong>29/03/2018</span>
+					      	<br/>
+					      	<span><strong>Situação:</strong>Recusado</span>
+
+
+					      </div>
+					    </li>
+					  </ul>
 					</div>
 		      </div>
-		</div>
+		    </div>
 
 	</body>
 
